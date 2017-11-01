@@ -115,54 +115,10 @@ public class CatchGame {
                 b.putPeg(Color.black, dalekThree.getRow(), dalekThree.getCol());
             }
             
-            /////////////////////DALEK MOVEMENT AFTER CRASH/////////////////////
-                        
-            // If dalekTwo and dalekThree crash - dalekOne moves
-            if (dalekTwo.hasCrashed() && dalekThree.hasCrashed()) {
-
-                // Only dalekOne advances
-                // Removing the old peg
-                b.removePeg(dalekOne.getRow(), dalekOne.getCol());
-                
-                // Moving towards the doctor 
-                dalekOne.advanceTowards(doc);
-                
-                // Placing the new peg
-                b.putPeg(Color.black, dalekOne.getRow(), dalekOne.getCol());
-            }
-            
-            // If dalekOne and dalekThree crash - dalekTwo moves
-            if (dalekOne.hasCrashed() && dalekThree.hasCrashed()) {
-                
-                // Only dalekTwo advances
-                // Removing the old peg
-                b.removePeg(dalekTwo.getRow(), dalekTwo.getCol());
-                
-                // Moving towards the doctor
-                dalekTwo.advanceTowards(doc);
-                
-                // Placing the new peg             
-                b.putPeg(Color.black, dalekTwo.getRow(), dalekTwo.getCol());
-            }
-            
-            // If dalekOne and dalekTwo crash - dalekThree moves
-            if (dalekOne.hasCrashed() && dalekTwo.hasCrashed()) {
-                
-                // Only dalekThree advances
-                // Removing old peg
-                b.removePeg(dalekThree.getRow(), dalekThree.getCol());
-                
-                // Moving towards the doctor
-                dalekThree.advanceTowards(doc); 
-                
-                // Placing the new peg
-                b.putPeg(Color.black, dalekThree.getRow(), dalekThree.getCol());
-            }
-            
             //////////////////////////////CRASH SITE////////////////////////////
             
             // If dalekOne and dalekTwo crash
-            if (dalekOne.getCol() == dalekTwo.getCol() && dalekOne.getRow() == dalekTwo.getRow()){
+            if (dalekOne.getRow() == dalekTwo.getRow() && dalekOne.getCol() == dalekTwo.getCol()){
                 
                 // Setting a crash site
                 dalekOne.crash();
@@ -174,7 +130,7 @@ public class CatchGame {
             }
             
             // If dalekOne and dalekThree crash
-            if (dalekOne.getCol() == dalekThree.getCol() && dalekOne.getRow() == dalekThree.getRow()){
+            if (dalekOne.getRow() == dalekThree.getRow() && dalekOne.getCol() == dalekThree.getCol()){
                 
                 // Setting a crash site
                 dalekOne.crash();
