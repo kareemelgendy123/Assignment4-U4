@@ -231,8 +231,8 @@ public class CatchGame {
                 // Displaying a message - Captured, Lost
                 b.displayMessage("YOU HAVE BEEN CAPTURED!");
                 
-                // Break the loop
-                break;
+                // Ending the game
+                status = false;
             }
 
             // If all of the daleks crash
