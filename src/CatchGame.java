@@ -61,11 +61,11 @@ public class CatchGame {
         ///////////////////////////////MAIN LOOP////////////////////////////////
         // While status is true, the game continues running
         // If status is false, then end game
-        while (status) {
-            
+        while (status){
+
             // Getting click from user
             Coordinate click = b.getClick();
-            
+                        
             // Removing the old doctor peg
             b.removePeg(doc.getRow(), doc.getCol());
                         
@@ -115,7 +115,7 @@ public class CatchGame {
                 b.putPeg(Color.black, dalekThree.getRow(), dalekThree.getCol());
             }
             
-            //////////////////////////////CRASH SITE////////////////////////////
+        ////////////////////////////////CRASH SITE//////////////////////////////
             
             // If dalekOne and dalekTwo crash
             if (dalekOne.getRow() == dalekTwo.getRow() && dalekOne.getCol() == dalekTwo.getCol()){
@@ -168,7 +168,7 @@ public class CatchGame {
                 b.putPeg(Color.red, dalekThree.getRow(), dalekThree.getCol());
             
                 // Displaying message - You win
-                b.displayMessage("YOU WIN!");
+                b.displayMessage("You Win!");
                 
                 // Ending the game
                 status = false;
@@ -185,7 +185,7 @@ public class CatchGame {
                 b.putPeg(Color.yellow, doc.getRow(), doc.getCol());
                 
                 // Displaying a message - Captured, Lost
-                b.displayMessage("YOU HAVE BEEN CAPTURED!");
+                b.displayMessage("You have been captured!");
                 
                 // Ending the game
                 status = false;
@@ -195,7 +195,7 @@ public class CatchGame {
             if (dalekOne.hasCrashed() && dalekTwo.hasCrashed() && dalekThree.hasCrashed()) {
                 
                 // Display message - You win
-                b.displayMessage("YOU WIN!");
+                b.displayMessage("You Win!");
                 
                 // Ending the game 
                 status = false;

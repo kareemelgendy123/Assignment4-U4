@@ -22,6 +22,7 @@ public class Doctor {
         
         // Assigning the row to the instance variable
         this.row = theRow;
+        
         // Assigning the col to the instance variable
         this.col = theCol;
     }
@@ -37,10 +38,12 @@ public class Doctor {
      * @param newRow The row the player clicked on.
      * @param newCol The column the player clicked on.
      */
+    
     public void move(int newRow, int newCol){
         
         // Generating a random row on the board
         int randomRow = (int) (Math.random() * 12);
+        
         // Generating a random column on the board
         int randomCol = (int) (Math.random() * 12);
         

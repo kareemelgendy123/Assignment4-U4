@@ -7,6 +7,7 @@ public class Dalek {
 
     // Instance variables - row and col of the dalek
     private int row, col;
+    
     // If the dalek has crashed into another dalek or doctor 
     private boolean hasCrashed;
     
@@ -20,6 +21,7 @@ public class Dalek {
     public Dalek(int theRow, int theCol) {
         // Assigning the row to the instance variable
         this.row = theRow;
+        
         // Assigning the col to the instance variable
         this.col = theCol;
         
@@ -37,22 +39,22 @@ public class Dalek {
     public void advanceTowards(Doctor doc) {
         
         // If the doctor position on the row is greater than the dalek position on the row
-        if (doc.getRow() > this.row) {
+        if (doc.getRow() > this.row){
             // Add one to the row (Move right)
             this.row++;
            
         // If the doctor position on the row is less than the dalek position on the row
-        } else if (doc.getRow() < this.getRow()) {
+        } else if (doc.getRow() < this.getRow()){
             // Subtract one from the row (Move Left)
             this.row--;
         
         // If the doctor position on the col is greater than the dalek position on the col
-        }if (doc.getCol() > this.col) {
+        }if (doc.getCol() > this.col){
             // Add one to the col (Move down)
             this.col++;
         
         // If the doctor position on the col is less than the dalek position on the col
-        } else if (doc.getCol() < this.col) {
+        } else if (doc.getCol() < this.col){
             // Subtract one from the col (Move up)
             this.col--;
         }
